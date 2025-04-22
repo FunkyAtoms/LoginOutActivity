@@ -13,7 +13,21 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-size: 200% 200%;
+    animation: shiftGradient 10s ease-in-out infinite;
     color: #333;
+}
+
+@keyframes shiftGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 .container{
@@ -28,6 +42,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: none;
+    z-index: 1;
 }
 
 .form-box.active{
@@ -94,4 +109,17 @@ p a:hover {
     color: #a42834;
     text-align: center;
     margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+span {
+    color: #7494ec;
+}
+
+#dvd{
+    z-index: -10;
+    pointer-events: none;
 }
